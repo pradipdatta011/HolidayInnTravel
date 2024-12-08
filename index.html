@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HolidayInn Travel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <style>
+    /* Custom height for hero section */
+    .hero-height {
+      height: 80vh;
+    }
+  </style>
+
+ <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</head>
+<body class="bg-gray-100">
+  <header class="bg-slate-100 shadow">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between py-4">
+        <!-- Logo -->
+         
+        <div class="flex items-center space-x-2">
+          <div class="bg-blue-500 bg-transparent rounded-full w-24 h-20 flex items-center justify-center text-white font-bold">
+            <img src="image/logo.gif" alt="">
+          </div>
+          <span class="text-3xl font-bold text-cyan-600">HolidayInn Travel</span>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="hidden md:flex space-x-12 font-semibold font-mo text-xl">
+          <a href="#home" class="text-gray-600 hover:text-blue-500">Home</a>
+          <a href="#about" class="text-gray-600 hover:text-blue-500">About</a>
+          <a href="#destinations" class="text-gray-600 hover:text-blue-500">Destinations</a>
+          <a href="#packages" class="text-gray-600 hover:text-blue-500">Packages</a>
+          <a href="#services" class="text-gray-600 hover:text-blue-500">Services</a>
+          <a href="#contact" class="text-gray-600 hover:text-blue-500">Contact</a>
+        </nav>
+
+        <!-- Button -->
+        <div class="hidden md:block">
+          <a href="#" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+            Book Now
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden flex items-center text-gray-600 focus:outline-none">
+          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Menu -->
+  <div class="md:hidden bg-white shadow">
+    <nav class="px-4 py-4 space-y-2">
+      <a href="#home" class="block text-gray-600 font-bold hover:text-blue-500">Home</a>
+      <a href="#about" class="block text-gray-600 font-bold hover:text-blue-500">About</a>
+      <a href="#destinations" class="block text-gray-600 font-bold hover:text-blue-500">Destinations</a>
+      <a href="#packages" class="block text-gray-600 font-bold hover:text-blue-500">Packages</a>
+      <a href="#services" class="block text-gray-600 font-bold hover:text-blue-500">Services</a>
+      <a href="#" class="block text-gray-600 font-bold hover:text-blue-500">Contact</a>
+    </nav>
+  </div>
+
+
+ <!-- Hero Section -->
+ <section id="home" class="relative hero-height">
+    <!-- Sliding Images -->
+    <div class="swiper-container hero-height">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="image/heroimg-1.gif" alt="Slide 1" class="w-full h-full object-cover">
+        </div>
+        <div class="swiper-slide">
+          <img src="image/heroimg-2.gif" alt="Slide 2" class="w-full h-full object-cover">
+        </div>
+        <div class="swiper-slide">
+          <img src="image/heroimg_3.gif" alt="Slide 3" class="w-full h-full object-cover">
+        </div>
+        <div class="swiper-slide">
+          <img src="image/heroimg_4.gif" alt="Slide 3" class="w-full h-full object-cover">
+        </div>
+      </div>
+      <!-- Navigation Arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-center">
+      <div class="text-white space-y-4">
+        <h1 class="text-4xl md:text-6xl font-bold">Welcome to HolidayInn Travel</h1>
+        <p class="text-lg md:text-xl">Explore the world with us. Book your dream vacation today!</p>
+        <a href="#" class="px-6 py-3 bg-blue-500 text-white rounded-lg text-lg hover:bg-blue-600">
+          Get Started
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper-container', {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true, // Stop autoplay on hover
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+</script>
+
+
+<!-- Destination Section -->
+<section id="destinations" class="py-12 bg-gray-100" style="background-image: url(image/background_image1.gif);">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-white hover:text-black mb-8">
+      Explore Our Top Destinations
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Destination 1 -->
+      <div class="group relative bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+        <img src="image/paris_1.png" alt="Destination 1" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">
+            Paris, France
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Experience the romance of the Eiffel Tower and the charm of French culture.
+          </p>
+          <a href="#" class="text-blue-500 hover:underline">Learn More</a>
+        </div>
+      </div>
+      <!-- Destination 2 -->
+      <div class="group relative bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+        <img src="image/bali_1.png" alt="Destination 2" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">
+            Bali, Indonesia
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Relax on stunning beaches and enjoy the vibrant culture of Bali.
+          </p>
+          <a href="#" class="text-blue-500 hover:underline">Learn More</a>
+        </div>
+      </div>
+      <!-- Destination 3 -->
+      <div class="group relative bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+        <img src="image/japan_1.png" alt="Destination 3" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">
+            Tokyo, Japan
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Discover the blend of tradition and modernity in Japan's capital.
+          </p>
+          <a href="#" class="text-blue-500 hover:underline">Learn More</a>
+        </div>
+      </div>
+      <!-- Destination 4 -->
+      <div class="group relative bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+        <img src="image/sydney_1.png" alt="Destination 4" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">
+            Sydney, Australia
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Explore the iconic Sydney Opera House and stunning harbor views.
+          </p>
+          <a href="#" class="text-blue-500 hover:underline">Learn More</a>
+        </div>
+      </div>
+      <!-- Destination 5 -->
+      <div class="group relative bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+        <img src="image/newyork_1.png" alt="Destination 5" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">
+            New York, USA
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Enjoy the bustling city life and iconic landmarks like Times Square.
+          </p>
+          <a href="#" class="text-blue-500 hover:underline">Learn More</a>
+        </div>
+      </div>
+      <!-- Destination 6 -->
+      <div class="group relative bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+        <img src="image/africa_1.png" alt="Destination 6" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">
+            Cape Town, South Africa
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Witness breathtaking landscapes and rich cultural heritage.
+          </p>
+          <a href="#" class="text-blue-500 hover:underline">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Exclusive Packages Section -->
+<section id="packages" class="py-12 bg-gray-100 bg-cover w-auto h-auto mx-auto" style="background-image: url(image/background_image2.gif);">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-8 hover:text-blue-700">
+      Our Exclusive Packages
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Package 1 -->
+      <div class="group bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+        <img src="image/paris_2.png" alt="Package 1" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">
+            Romantic Paris Getaway
+          </h3>
+          <p class="text-gray-600 mb-4 font-bold">
+            Experience the charm of Paris with a 5-day romantic getaway.Travel guide, breakfast, and transportation are included. 
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="text-lg font-bold text-gray-800">$1,499</span>
+            <a href="#" class="px-4 py-2 bg-blue-500 text-white rounded-lg text-sm hover:bg-blue-600">
+              Book Now
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Package 2 -->
+      <div class="group bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+        <img src="image/bali_2.png" alt="Package 2" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">
+            Exotic Bali Retreat
+          </h3>
+          <p class="text-gray-600 mb-4 font-bold">
+            Relax on pristine beaches with this 7-day Bali retreat package. Travel guide, breakfast, and transportation are included. 
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="text-lg font-bold text-gray-800">$1,299</span>
+            <a href="#" class="px-4 py-2 bg-blue-500 text-white rounded-lg text-sm hover:bg-blue-600">
+              Book Now
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Package 3 -->
+      <div class="group bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+        <img src="image/japan_2.png" alt="Package 3" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">
+            Tokyo Adventure
+          </h3>
+          <p class="text-gray-600 mb-4 font-bold">
+            Explore the vibrant city of Tokyo with this 6-day adventure package. Travel guide, breakfast, and transportation are included. 
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="text-lg font-bold text-gray-800">$1,899</span>
+            <a href="#" class="px-4 py-2 bg-blue-500 text-white rounded-lg text-sm hover:bg-blue-600">
+              Book Now
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Package 4 -->
+      <div class="group bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+        <img src="image/sydney_2.png" alt="Package 4" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">
+            Sydney Harbor Experience
+          </h3>
+          <p class="text-gray-600 mb-4 font-bold">
+            Enjoy a 5-day adventure exploring Sydney's iconic harbor and landmarks. Travel guide, breakfast, and transportation are included. 
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="text-lg font-bold text-gray-800">$1,699</span>
+            <a href="#" class="px-4 py-2 bg-blue-500 text-white rounded-lg text-sm hover:bg-blue-600">
+              Book Now
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Package 5 -->
+      <div class="group bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+        <img src="image/newyork_2.png" alt="Package 5" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">
+            New York City Lights
+          </h3>
+          <p class="text-gray-600 mb-4 font-bold">
+            Discover the energy of NYC with this 4-day guided tour package. Travel guide, breakfast, and transportation are included. 
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="text-lg font-bold text-gray-800">$1,599</span>
+            <a href="#" class="px-4 py-2 bg-blue-500 text-white rounded-lg text-sm hover:bg-blue-600">
+              Book Now
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Package 6 -->
+      <div class="group bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+        <img src="image/africa_2.png" alt="Package 6" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">
+            African Safari Adventure
+          </h3>
+          <p class="text-gray-600 mb-4 font-bold">
+            Explore the wildlife of Africa with this 8-day safari adventure. Travel guide, breakfast, and transportation are included. 
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="text-lg font-bold text-gray-800">$2,299</span>
+            <a href="#" class="px-4 py-2 bg-blue-500 text-white rounded-lg text-sm hover:bg-blue-600">
+              Book Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Services Section -->
+<section id="services" class="py-12 bg-gray-50" style="background-image: url();">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-red-800 hover:text-black mb-8">
+      Services We Provide
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Service Card 1 -->
+      <div class="group bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 p-6">
+        <img src="image/flight_booking.png" alt="Flight Booking" class="w-full h-64 mx-auto mb-4 object-contain transform transition duration-300 hover:scale-105">
+        <h3 class="text-xl font-semibold text-gray-800 text-center mb-2 group-hover:text-blue-600 transition-colors">
+          Flight Booking
+        </h3>
+        <p class="text-gray-600 text-center">
+          Hassle-free flight bookings to any destination around the globe.
+        </p>
+        <a href="#" class="block px-6 py-2 bg-blue-500 text-white rounded-lg text-center text-lg hover:bg-blue-600 transition-colors">
+          Learn More
+        </a>
+      </div>
+      <!-- Service Card 2 -->
+      <div class="group bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 p-6">
+        <img src="image/hotel_reservation.png" alt="Hotel Reservations" class="w-full h-64 mx-auto mb-4 object-contain transform transition duration-300 hover:scale-105">
+        <h3 class="text-xl font-semibold text-gray-800 text-center mb-2 group-hover:text-blue-600 transition-colors">
+          Hotel Reservations
+        </h3>
+        <p class="text-gray-600 text-center">
+          Stay at premium hotels with affordable and reliable bookings.
+        </p>
+        <a href="#" class="block px-6 py-2 bg-blue-500 text-white rounded-lg text-center text-lg hover:bg-blue-600 transition-colors">
+          Learn More
+        </a>
+      </div>
+      <!-- Service Card 3 -->
+      <div class="group bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 p-6">
+        <img src="image/rental_car.png" alt="Car Rentals" class="w-full h-64 mx-auto mb-4 object-contain transform transition duration-300 hover:scale-105">
+        <h3 class="text-xl font-semibold text-gray-800 text-center mb-2 group-hover:text-blue-600 transition-colors">
+          Car Rentals
+        </h3>
+        <p class="text-gray-600 text-center">
+          Comfortable and affordable car rentals for your journeys.
+        </p>
+        <a href="#" class="block px-6 py-2 bg-blue-500 text-white rounded-lg text-center text-lg hover:bg-blue-600 transition-colors">
+          Learn More
+        </a>
+      </div>
+      <!-- Service Card 4 -->
+      <div class="group bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 p-6">
+        <img src="image/travel_package.png" alt="Tour Packages" class="w-full h-64 mx-auto mb-4 object-contain transform transition duration-300 hover:scale-105">
+        <h3 class="text-xl font-semibold text-gray-800 text-center mb-2 group-hover:text-blue-600 transition-colors">
+          Tour Packages
+        </h3>
+        <p class="text-gray-600 text-center">
+          Explore curated tour packages tailored to your preferences.
+        </p>
+        <a href="#" class="block px-6 py-2 bg-blue-500 text-white rounded-lg text-center text-lg hover:bg-blue-600 transition-colors">
+          Learn More
+        </a>
+      </div>
+      <!-- Service Card 5 -->
+      <div class="group bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 p-6">
+        <img src="image/visa_assistance.png" alt="Visa Assistance" class="w-full h-64 mx-auto mb-4 object-contain transform transition duration-300 hover:scale-105">
+        <h3 class="text-xl font-semibold text-gray-800 text-center mb-2 group-hover:text-blue-600 transition-colors">
+          Visa Assistance
+        </h3>
+        <p class="text-gray-600 text-center">
+          Smooth visa processing to ensure hassle-free travel experiences.
+        </p>
+        <a href="#" class="block px-6 py-2 bg-blue-500 text-white rounded-lg text-center text-lg hover:bg-blue-600 transition-colors">
+          Learn More
+        </a>
+      </div>
+      <!-- Service Card 6 -->
+      <div class="group bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 p-6">
+        <img src="image/travel_insurance.png" alt="Travel Insurance" class="w-full h-64 mx-auto mb-4 object-contain transform transition duration-300 hover:scale-105">
+        <h3 class="text-xl font-semibold text-gray-800 text-center mb-2 group-hover:text-blue-600 transition-colors">
+          Travel Insurance
+        </h3>
+        <p class="text-gray-600 text-center">
+          Stay protected during your trips with comprehensive insurance.
+        </p>
+        <a href="#" class="block px-6 py-2 bg-blue-500 text-white rounded-lg text-center text-lg hover:bg-blue-600 transition-colors">
+          Learn More
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- About Section -->
+<section id="about" class="py-12 bg-gray-50" style="background-image: url(image/background_image3.gif);">
+  <div class="container mx-auto px-4" style="background-image: url();">
+    <div class="text-center mb-8">
+      <h2 class="text-3xl font-bold text-white  hover:text-blue-700">About HolidayInn Travel</h2>
+      <p class="text-black hover:text-white font-semibold mt-2">
+        Your trusted partner for unforgettable travel experiences.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <!-- About Image -->
+      <div>
+        <img src="image/holidayinn_aboutimag.gif" alt="HolidayInn Travel" class="rounded-lg w-full shadow-2xl transform transition duration-300 hover:scale-105">
+      </div>
+      <!-- About Details -->
+      <div>
+        <h3 class="text-2xl font-semibold text-gray-800 hover:text-white mb-4">Who We Are</h3>
+        <p class="text-black hover:text-white font-semibold mb-6">
+          At HolidayInn Travel, we specialize in crafting personalized travel plans to make your journeys truly memorable. With a team of dedicated professionals and partnerships across the globe, we ensure your travel experience is seamless and enjoyable.
+        </p>
+
+        <!-- Vision -->
+        <div class="mb-6">
+          <h4 class="text-xl font-bold text-gray-800  hover:text-white">Our Vision</h4>
+          <p class="text-black hover:text-white font-semibold mt-2">
+            To be the most reliable travel partner, creating life-changing experiences that connect people and cultures worldwide.
+          </p>
+        </div>
+
+        <!-- Mission -->
+        <div class="mb-6">
+          <h4 class="text-xl font-bold text-gray-800 hover:text-white">Our Mission</h4>
+          <p class="text-black hover:text-white font-semibold mt-2">
+            To provide exceptional travel services with a personal touch, ensuring every customer embarks on a journey that exceeds their expectations.
+          </p>
+        </div>
+
+        <!-- Address -->
+        <div>
+          <h4 class="text-xl font-bold text-gray-800 hover:text-white">Our Address</h4>
+          <p class="text-black font-semibold hover:text-white mt-2">
+            HolidayInn Travel, <br>
+            123 Travel Street, Wanderlust City, <br>
+            Adventure State, 456789, Country. <br>
+            <strong>Phone:</strong> +1 (234) 567-8901 <br>
+            <strong>Email:</strong> contact@holidayinntravel.com
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+ <!-- Contact Section -->
+ <section id="contact" class="py-16 bg-white" style="background-image: url(image/background_image4.gif);">
+    <div class="container mx-auto px-6 lg:px-20 text-center">
+      <h2 class="text-3xl font-bold text-gray-800 hover:text-white">Contact Us</h2>
+      <p class="text-white mt-4 text-lg hover:text-red-900">We’d love to hear from you! Reach out to us with any questions or concerns.</p>
+
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12">
+        <!-- Contact Info -->
+        <div class="space-y-6">
+          <div class="flex items-center justify-center md:justify-start">
+            <i class="fas fa-map-marker-alt text-blue-500 text-2xl mr-4"></i>
+            <p class="text-white text-lg">123 Travel Street, Wanderlust City, Adventure State, 456789, Country.</p>
+          </div>
+          <div class="flex items-center justify-center md:justify-start">
+            <i class="fas fa-phone text-blue-500 text-2xl mr-4"></i>
+            <p class="text-white text-lg">+1 (800) 123-4567</p>
+          </div>
+          <div class="flex items-center justify-center md:justify-start">
+            <i class="fas fa-envelope text-blue-500 text-2xl mr-4"></i>
+            <p class="text-white text-lg">info@holidayinntravel.com</p>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div>
+          <form action="#" method="POST" class="bg-gray-50 p-8 rounded-lg shadow-lg">
+            <div class="grid grid-cols-1 gap-6">
+              <div>
+                <label for="name" class="block text-gray-700 text-lg font-medium">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required
+                  class="w-full px-4 py-3 mt-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+              </div>
+
+              <div>
+                <label for="email" class="block text-gray-700 text-lg font-medium">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required
+                  class="w-full px-4 py-3 mt-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+              </div>
+
+              <div>
+                <label for="message" class="block text-gray-700 text-lg font-medium">Your Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Write your message" required
+                  class="w-full px-4 py-3 mt-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+              </div>
+
+              <button type="submit"
+                class="w-full py-3 bg-blue-500 text-white font-semibold rounded-lg transition duration-300 hover:bg-blue-600 hover:scale-105">
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+
+<!-- Customer Review Section -->
+<section class="py-16 bg-white text-center" style="background-image: url(image/background_image5.gif);">
+    <div class="container mx-auto px-6 lg:px-20">
+      <h2 class="text-3xl font-bold text-white hover:text-red-800">What Our Customers Are Saying</h2>
+      <p class="text-lg text-white hover:text-red-900 mt-4">We take pride in delivering excellent travel experiences. Here’s what our customers have to say:</p>
+
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Review Card 1 -->
+        <div class="bg-gray-50 p-8 rounded-lg shadow-lg hover:shadow-xl transform transition duration-300 hover:scale-105">
+          <p class="text-gray-600 italic">"HolidayInn Travel made our vacation unforgettable! The team was extremely helpful and made sure every detail was perfect. Highly recommended!"</p>
+          <div class="mt-6 flex items-center justify-center">
+            <img src="image/david.png" alt="Customer Photo" class="rounded-full mr-4">
+            <div>
+              <p class="font-semibold text-gray-800">David Parker</p>
+              <p class="text-gray-500">Traveler</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review Card 2 -->
+        <div class="bg-gray-50 p-8 rounded-lg shadow-lg hover:shadow-xl transform transition duration-300 hover:scale-105">
+          <p class="text-gray-600 italic">"I couldn’t have asked for a better experience! The attention to detail and care provided by HolidayInn Travel was above and beyond."</p>
+          <div class="mt-6 flex items-center justify-center">
+            <img src="image/elin.png" alt="Customer Photo" class="rounded-full mr-4">
+            <div>
+              <p class="font-semibold text-gray-800">Elin John</p>
+              <p class="text-gray-500">Adventure Seeker</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review Card 3 -->
+        <div class="bg-gray-50 p-8 rounded-lg shadow-lg hover:shadow-xl transform transition duration-300 hover:scale-105">
+          <p class="text-gray-600 italic">"A seamless experience from start to finish! We’ll definitely be booking our next vacation with HolidayInn Travel!"</p>
+          <div class="mt-6 flex items-center justify-center">
+            <img src="image/mark.png" alt="Customer Photo" class="rounded-full mr-4">
+            <div>
+              <p class="font-semibold text-gray-800">Mark Wilson</p>
+              <p class="text-gray-500">Family Traveler</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  
+  <!-- Newsletter Section -->
+  <section class="py-16 bg-blue-500 text-white text-center">
+    <div class="container mx-auto px-6 lg:px-20">
+      <h2 class="text-3xl font-bold hover:text-red-900">Stay Updated with Our Latest Offers!</h2>
+      <p class="text-lg mt-4 hover:text-black">Sign up for our newsletter and never miss out on exclusive deals and travel updates.</p>
+
+      <!-- Newsletter Form -->
+      <div class="mt-8 flex justify-center">
+        <form action="#" method="POST" class="flex items-center space-x-4">
+          <input type="email" name="email" placeholder="Enter your email" required
+            class="px-6 py-3 w-80 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-600 transition duration-300">
+          <button type="submit"
+            class="px-6 py-3 bg-white text-blue-500 font-semibold rounded-lg transition duration-300 hover:bg-gray-100 hover:scale-105">
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+<!-- Footer Section -->
+<footer class="bg-gray-800 text-white py-16" style="background-image: url(image/background_6.gif);">
+    <div class="container mx-auto px-6 lg:px-20">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12">
+        
+        <!-- About Us -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">About Us</h3>
+          <p class="text-gray-400 hover:text-yellow-600">We are a travel agency dedicated to offering the best travel experiences. Explore the world with us!</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+          <ul>
+            <li><a href="#" class="text-gray-400 hover:text-red-900 transition duration-300">Home</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-red-900 transition duration-300">Destinations</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-red-900 transition duration-300">Packages</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-red-900 transition duration-300">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Contact Info</h3>
+          <p class="text-gray-400 hover:text-yellow-600">123 Travel Street, Wanderlust City,</p>
+          <p class="text-gray-400 hover:text-yellow-600">Adventure State, 456789, Country. </p>
+          <p class="text-gray-400 hover:text-yellow-600">Phone: +1 (234) 567-8901 </p>
+          <p class="text-gray-400 hover:text-yellow-600">Email: info@holidayinn.com</p>
+        </div>
+
+       
+        <div>                  
+          <!-- Social Media -->     
+
+           <section class="social-media-links text-center mt-6">
+              <!-- Follow Us -->
+            <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+             <div class="flex justify-center space-x-4">
+                <!-- Facebook -->
+              <a href="https://www.facebook.com/your-page" target="_blank" rel="noopener noreferrer">
+               <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" 
+               alt="Facebook" 
+               class="w-8 h-8">
+               </a>
+    
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/your-profile" target="_blank" rel="noopener noreferrer">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" 
+                      alt="Instagram" 
+                      class="w-8 h-8">
+                </a>
+    
+   
+                  <!-- LinkedIn -->
+                  <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" 
+                        alt="LinkedIn" 
+                        class="w-8 h-8">
+                  </a>
+                </div>
+              </section>
+                  </div>
+          </div>
+
+      <div class="mt-12 border-t border-gray-700 pt-8 text-center">
+        <p class="text-gray-400">&copy; 2024 HolidayInn Travel. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+
+
+
+
+</html>
